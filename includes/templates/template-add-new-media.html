@@ -1,0 +1,44 @@
+<script type="text/template" id="WRS_ADD_NEW_MEDIA_TML">
+	<div class="slideshow_media" data-media-type="image" data-media-id="<%= media_id %>" id="slideshow_media_<%= media_id %>">
+		<div class="edit_media dashicons dashicons-edit" title="Edit Media"></div>
+		<div class="remove_media" title="Remove Media">X</div>
+		<img src="<%= media_url %>" />
+		<input type="hidden" value="<%= media_id %>" name="slideshow_media[]" class="slideshow_media_val" />
+		<input type="hidden" value="" name="slideshow_media_caption[<%= media_id %>]" class="slideshow_media_caption" />
+	</div>
+</script>
+
+<script type="text/template" id="WRS_INSERT_IMAGEBYURL_TML">
+	<div class="wrs_insert_image_by_url">
+		<textarea class="insert_image_url" placeholder="Insert Multiple Image's URL Separated By Comma..">
+		</textarea>
+		<div class="button upload_image_by_url">Upload Images</div>
+		<i class="fa fa-cog fa-fw fa-spin insert_image_byurl_loader"></i>
+		<div class="external_uploaded_images"></div>
+	</div>
+</script>
+
+<script type="text/template" id="WRS_ADD_NEW_VIDEO_TML">
+	<div class="slideshow_media" data-media-type="video" data-video-type="<%= video_type %>" data-media-id="<%= media_id %>" data-video-id="<%= media_id %>" id="slideshow_media_<%= media_id %>">
+		<i class="fa fa-cog fa-fw fa-spin download_video_image_loader"></i>
+		<div class="download_video_image fa fa-download" title="Download Video Image on Server"></div>
+		<div class="play_video dashicons dashicons-admin-collapse" title="Play Video"></div>
+		<div class="edit_media dashicons dashicons-edit" title="Edit Media"></div>
+		<div class="remove_media" title="Remove Media">X</div>
+		<img src="<%= media_url %>" />
+		<input type="hidden" value="<%= media_id %>" name="slideshow_media[]" class="slideshow_media_val" />
+		<input type="hidden" value="<%= caption %>" name="slideshow_media_caption[<%= media_id %>]" class="slideshow_media_caption" />
+		<input type="hidden" value="<%= video_type %>" name="slideshow_video_type[<%= media_id %>]" class="slideshow_video_type" />
+		<input type="hidden" value="" name="slideshow_video_image_id[<%= media_id %>]" class="slideshow_video_image_id" />
+	</div>
+</script>
+
+<script type="text/template" id="WRS_ADD_NEW_VIDEO_POPUP_TML">
+	<div class="video_popup_overlay close_video_modal"></div>
+	<div class="insert_video_popup video_popup">
+		<a title="Close" href="#" class="media-modal-close close_video_modal"><span class="media-modal-icon"></span></a>
+		<h3>Insert Video URL: </h3>
+		<input type="text" value="" name="video_url" placeholder="http://" />
+		<div class="button add_video" action="<%= action %>">ADD VIDEO</div> 
+	</div>
+</script>
